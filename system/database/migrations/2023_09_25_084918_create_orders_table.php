@@ -19,6 +19,7 @@ return new class extends Migration
             $table->text('qty');
             $table->bigInteger('total_price');
             $table->text('status');
+            $table->text('snaptoken');
             $table->timestamps();
         });
     }

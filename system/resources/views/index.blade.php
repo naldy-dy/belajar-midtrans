@@ -17,16 +17,16 @@
     <h5 class="card-title">Durian</h5>
     <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
 
-    <form action="" method="post">
+    <form action="{{url('/checkout')}}" method="post">
         @csrf
         <div class="form-group">
             <span>Jumlah Pesanan</span>
-            <input type="number"  min="1" value="1" class="form-control" name="jumlah">
+            <input type="number"  min="1" value="1" class="form-control" name="qty">
         </div>
 
          <div class="form-group">
             <span>Nama Pelanggan</span>
-            <input type="text" class="form-control" name="nama_pelanggan">
+            <input type="text" class="form-control" name="nama">
         </div>
 
          <div class="form-group">
@@ -38,6 +38,8 @@
             <span>Alamat</span>
             <textarea name="alamat" id="" cols="30" rows="10" class="form-control"></textarea>
         </div>
+
+        <button class="btn btn-primary" type="submit">Masuk Keranjang</button>
     </form>
 
 

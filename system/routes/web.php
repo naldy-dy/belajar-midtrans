@@ -16,4 +16,5 @@ use App\Http\Controllers\IndexController;
 
 Route::controller(IndexController::class)->group(function () {
     Route::get('/', 'index');
+    Route::post('checkout', 'checkout');
 });

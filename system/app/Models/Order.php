@@ -9,7 +9,7 @@ use Str;
 class Order extends Model
 {
     use HasFactory;
-     protected $table = "order"; 
+     protected $table = "orders"; 
 
 
 }
