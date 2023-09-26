@@ -17,7 +17,6 @@ class IndexController extends Controller
      $order->alamat = request('alamat');
      $order->notlp = request('notlp');
      $order->qty = request('qty');
-     $order->snaptoken = '-';
      $order->total_price = 100000*request('qty');
      $order->status = "Unpied";
      $order->save();
@@ -39,11 +38,7 @@ class IndexController extends Controller
     );
 
      $snapToken = \Midtrans\Snap::getSnapToken($params);
-       // dd($snapToken);
 
-     Order::where('id',$order->id)->update([
-        'snaptoken' => $snapToken
-     ]);
      return view('checkout',compact('snapToken','order'));
 
  }
